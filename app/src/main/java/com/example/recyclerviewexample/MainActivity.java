@@ -2,6 +2,7 @@ package com.example.recyclerviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        main_RV_movies.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+       // main_RV_movies.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        main_RV_movies.setLayoutManager(new GridLayoutManager(this,2));
         main_RV_movies.setHasFixedSize(true);
         main_RV_movies.setItemAnimator(new DefaultItemAnimator());
         main_RV_movies.setAdapter(movieAdapter);
